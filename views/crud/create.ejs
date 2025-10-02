@@ -57,6 +57,13 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <img
+          src="https://cdn.create.vista.com/api/media/small/233783454/stock-vector-circle-swoosh-orbit-vector-satellite-cosmos-logo-planet-best-logo"
+          class="rounded-circle ms-5 me-3"
+          alt=""
+          height="50"
+          width="50"
+        />
         <div class="container">
           <a class="navbar-brand" href="/crud">Navbar</a>
           <button
@@ -73,14 +80,20 @@
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/crud" aria-current="page">Home </a>
+                <a class="nav-link" href="/crud" aria-current="page">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="crud/create"
-                  >Add Users <span class="visually-hidden">(current)</span></a
-                >
+                <a class="nav-link active" href="/crud/create">Add Users</a>
               </li>
             </ul>
+            <form class="d-flex my-2 my-lg-0" action="/logout">
+              <button
+                class="btn btn-outline-warning my-2 my-sm-0"
+                type="submit"
+              >
+                Logout
+              </button>
+            </form>
           </div>
         </div>
       </nav>
@@ -89,11 +102,11 @@
       <div class="container my-5">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-4">
+            <div class="card shadow-lg rounded">
+              <div class="card-body p-4 shadow-lg">
                 <h3 class="text-center mb-4">Add User</h3>
                 <form action="" method="post">
-                  <div class="form-floating mb-3">
+                  <div class="form-floating mb-3 shadow-sm rounded">
                     <input
                       type="text"
                       class="form-control"
@@ -105,7 +118,7 @@
                     <label for="nameInput">Name</label>
                   </div>
 
-                  <div class="form-floating mb-3">
+                  <div class="form-floating mb-3 shadow-sm rounded">
                     <input
                       type="email"
                       class="form-control"
@@ -117,7 +130,7 @@
                     <label for="emailInput">Email</label>
                   </div>
 
-                  <div class="form-floating mb-3">
+                  <div class="form-floating mb-3 shadow-sm rounded">
                     <input
                       type="number"
                       class="form-control"
@@ -129,7 +142,7 @@
                     <label for="ageInput">Age</label>
                   </div>
 
-                  <div class="form-floating mb-4">
+                  <div class="form-floating mb-4 shadow-sm rounded">
                     <input
                       type="tel"
                       class="form-control"
@@ -142,7 +155,7 @@
                   </div>
 
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary shadow">
                       <i class="bi bi-plus-circle me-1"></i> Add User
                     </button>
                   </div>
@@ -153,7 +166,7 @@
             <!-- Back Button -->
             <div class="text-center mt-3">
               <a href="/crud" class="btn btn-outline-secondary btn-sm">
-                <i class="bi bi-arrow-left-circle"></i> Back to Home
+                <i class="bi bi-house-fill"></i> Back to Home
               </a>
             </div>
           </div>

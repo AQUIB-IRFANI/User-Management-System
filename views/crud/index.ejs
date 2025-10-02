@@ -58,6 +58,13 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <img
+          src="https://cdn.create.vista.com/api/media/small/233783454/stock-vector-circle-swoosh-orbit-vector-satellite-cosmos-logo-planet-best-logo"
+          class="rounded-circle ms-5 me-3"
+          alt=""
+          height="50"
+          width="50"
+        />
         <div class="container">
           <a class="navbar-brand" href="/crud">Navbar</a>
           <button
@@ -75,13 +82,21 @@
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" href="/crud" aria-current="page"
-                  >Home <span class="visually-hidden">(current)</span></a
+                  >Home</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/crud/create">Add Users</a>
               </li>
             </ul>
+            <form class="d-flex my-2 my-lg-0" action="/logout">
+              <button
+                class="btn btn-outline-warning my-2 my-sm-0"
+                type="submit"
+              >
+                Logout
+              </button>
+            </form>
           </div>
         </div>
       </nav>
