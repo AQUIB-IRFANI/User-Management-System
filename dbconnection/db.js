@@ -1,12 +1,12 @@
-const { mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 
-const conMongoDB = async () => {
-  try {
-    await mongoose.connect("mongodb+srv://user-management-system:Aquib@92@user-management-system.qhi8uzz.mongodb.net/?appName=User-Management-System");
-    console.log('connected');
-  } catch (error) {
-    console.log(error);
-  }
+const connectMongo = () => {
+  mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("connected"))
+  .catch(err => console.log(err));
+};
 
-}
-module.exports = conMongoDB;
+module.exports = connectMongo;
