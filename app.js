@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const path = require("path");
+const cors = require("cors");
 const authroutes = require("./routes/authroutes");
 const crudroutes = require("./routes/crudroutes");
 const conMongoDB = require("./dbconnection/db");
@@ -15,6 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+app.use(cors({ origin: "" }));
 app.use(session({
   secret: 'secret',
   resave: false,
